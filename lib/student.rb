@@ -102,7 +102,7 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE new_students.id = 2
+      WHERE new_student.id = 2
     SQL
 
     DB[:conn].execute(sql).map do |row|
