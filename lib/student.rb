@@ -112,7 +112,7 @@ class Student
   end
 
   def self.all_students_in_grade_X(grade)
-    sql = <<-SQL 
+    sql = <<-SQL
       SELECT *
       FROM students
       WHERE students.grade = 'X'
@@ -120,7 +120,7 @@ class Student
 
     DB[:conn]execute(sql).map do |row|
       self.new_from_db(row)
-    end 
+    end
   end 
 
 end
