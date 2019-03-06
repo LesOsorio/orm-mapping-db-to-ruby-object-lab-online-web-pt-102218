@@ -115,7 +115,6 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE students.grade = 'X'
     SQL
 
     DB[:conn].execute(sql).map do |row|
